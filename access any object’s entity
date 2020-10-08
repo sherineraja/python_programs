@@ -1,0 +1,30 @@
+class level0:
+    Var0 = 100
+    def __init__(self):
+        self.var0 = 101
+    
+    def fun0(self):
+        return 102
+        
+class level1(level0):
+    Var1 = 200
+    def __init__(self):
+        level0.__init__(self)
+        self.var1 = 201
+    
+    def fun1(self):
+        return 202
+        
+class level2(level1):
+    Var2 = 300
+    def __init__(self):
+        level1.__init__(self)
+        self.var2 = 301
+    
+    def fun2(self):
+        return 302
+        
+object1 = level2()
+print(object1.Var0, object1.var0, object1.fun0())
+print(object1.Var1, object1.var1, object1.fun1())
+print(object1.Var2, object1.var2, object1.fun2())
