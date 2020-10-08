@@ -1,0 +1,21 @@
+class Class:
+    __counter = 0
+    def __init__(self,val=1):
+        self.First = val
+        Class.__counter += 1
+    
+    def setsecond(self,val):
+        self.Second = val
+
+object1 = Class()
+object2 = Class(2)
+object2.setsecond(3)
+object3 = Class(4)
+object3.__Third = 5
+
+print(object1.__dict__, object1._Class__counter)
+print(object2.__dict__, object2._Class__counter)
+print(object3.__dict__, object3._Class__counter)
+
+print(Class.__dict__)
+print(object1.__dict__)
