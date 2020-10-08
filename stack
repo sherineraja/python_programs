@@ -1,0 +1,20 @@
+class stack:
+    def __init__(self):
+        print("Hi")
+        self.__stk = []
+    
+    def push(self,val):
+        self.__stk.append(val)
+        
+    def pop(self):
+        val = self.__stk[-1]
+        del self.__stk[-1]
+        return val
+        
+Stack = stack()
+Stack.push(3)
+Stack.push(5)
+Stack.push(7)
+print(Stack.pop())
+print(Stack.pop())
+print(Stack.pop())
